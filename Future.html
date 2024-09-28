@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureMC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('minecraft.png');
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 48px;
+            color: #cb0eff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            margin-bottom: 20px;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 100px;
+            cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+        }
+        .rules-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .rules-box:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+        .toggle-button {
+            cursor: pointer;
+            padding: 15px;
+            background-color: #a61c98;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .toggle-button:hover {
+            background-color: #218838;
+        }
+        .rules-content {
+            display: none;
+            margin-top: 20px;
+            white-space: pre-wrap; 
+        }
+        .rules-content.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="https://discord.gg/vAyrDjNfQK"><img src="discord.png" alt="Logo Discord" class="logo"></a>
+    <h1>FutureMC</h1>
+    
+    <div class="rules-box">
+        <button class="toggle-button">Regole</button>
+        <div class="rules-content" id="rules-content">
+            https://docs.google.com/document/d/1orn_GcszW_yC13HOQ50nJZK1-iUYTokGgqCv1tX7knc/edit?pli=1#heading=h.ibuamp8631j
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.toggle-button').addEventListener('click', function() {
+        const rulesContent = document.getElementById('rules-content');
+        rulesContent.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
